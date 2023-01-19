@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/characterListFragment"
+    android:id="@+id/main">
+
+    <fragment
+        android:id="@+id/characterListFragment"
+        android:name="com.elshafee.androiden.breakingbadapp.ui.CharacterListFragment"
+        android:label="Fragment CharacterList"
+        tools:layout="@layout/activity_character_list_fragment">
+        <action
+            android:id="@+id/showCharacterImageFragment"
+            app:destination="@id/characterImageFragment"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/characterImageFragment"
+        android:name="com.elshafee.androiden.breakingbadapp.ui.CharacterImageFragment"
+        tools:layout="@layout/activity_character_image_fragment"
+        android:label="Fragment Character Image"
+       >
+        <argument
+            android:name="imageUrl"
+            app:argType="string"
+            />
+    </fragment>
+
+</navigation>
